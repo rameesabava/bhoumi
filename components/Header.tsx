@@ -142,8 +142,8 @@ export default function Header() {
               className="hidden items-center gap-2 whitespace-nowrap rounded-lg bg-[#1456c1] px-3 py-2.5 text-[14px] font-bold text-white shadow-[0_4px_12px_rgba(20,86,193,0.3)] transition hover:bg-[#0f47a3] lg:flex xl:px-4"
             >
               <ChatIcon />
-<span className="xl:hidden">WhatsApp: 9995067188</span>
-<span className="hidden xl:inline">CALL / Whatsapp: 9995067188</span>
+{/* <span className="xl:hidden">WhatsApp: 9995067188</span> */}
+<span className="xl:inline">CALL / Whatsapp: 9995067188</span>
             </a>
 
             {/* Mobile: call icon + menu toggle */}
