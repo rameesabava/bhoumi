@@ -189,7 +189,7 @@ export default function Footer() {
             <p className="mt-3 text-sm leading-relaxed text-[#9aa8c4]">
               Bhoumi Consultancy provides assistance and guidance relating to
               health insurance products offered by Star Health and HDFC ERGO
-              from Health Insurance Expert Mr.Sanju Palakkaparamaban. Product
+              from Health Insurance Expert Mr. Sanju Palakkaparamaban. Product
               features, eligibility, premiums, underwriting, policy issuance,
               and claim decisions are subject to the respective insurer’s
               terms, conditions, and policy wording. Customers should review
