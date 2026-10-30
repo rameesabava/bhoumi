@@ -15,8 +15,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export const runtime = "nodejs";
-
 const escapeHtml = (s: string) =>
   s
     .replace(/&/g, "&amp;")
