@@ -7,7 +7,7 @@ import Icon from "@/components/Icon";
 export const metadata: Metadata = {
   title: "About Us | Bhoumi Consultancy",
   description:
-    "Meet Sanju P B, an insurance professional with more than 15 years of experience in healthcare and health insurance, guiding customers on Star Health and HDFC ERGO plans.",
+    "Meet Sanju Palakkaparamban, an insurance professional with more than 15 years of experience in healthcare and health insurance, guiding customers on Star Health and HDFC ERGO plans.",
 };
 
 /* ───────────────────────── Config ───────────────────────── */
@@ -71,7 +71,7 @@ export default function AboutUsPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.06em] text-[#1456c1]">
               <Icon name="shield-check" size={16} />
-              Leadership — Sanju P B
+              Leadership — Sanju Palakkaparamban
             </span>
 
             <h1
@@ -85,7 +85,7 @@ export default function AboutUsPage() {
 
             <div className="mt-6 max-w-[760px] space-y-5 text-[14px] leading-[1.6] text-slate-600 sm:text-[15px] xl:text-[16px]">
               <p>
-                Sanju P B is an insurance professional with more than 15 years
+                Sanju Palakkaparamban is an insurance professional with more than 15 years
                 of experience across the healthcare and health insurance
                 sectors. His experience includes hospital insurance operations,
                 claims processes, insurance coordination, and customer support.
@@ -122,7 +122,7 @@ export default function AboutUsPage() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] border border-slate-200 shadow-[0_16px_40px_rgba(15,31,69,0.15)]">
             {/* Replace with your leadership image for this page */}
             <Image
-              src="/images/sanju.png"
+              src="/images/sanju.jpeg"
               alt="Sanju P B consulting with a customer"
               fill
               priority

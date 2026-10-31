@@ -17,21 +17,23 @@ const HEADING = "font-[family-name:var(--font-heading)] tracking-tight text-[#0f
 
 /* ───────────────────────── Data ───────────────────────── */
 
-const SERVICES: { title: string; icon: IconName }[] = [
-  { title: "Individual health insurance plans", icon: "user" },
-  { title: "Family floater health insurance plans", icon: "users" },
-  { title: "Health insurance options for senior citizens", icon: "heart-pulse" },
+const SERVICES: { title: string; icon: IconName; image: string }[] = [
+  { title: "Individual health insurance plans", icon: "user", image: "/images/1.png" },
+  { title: "Family floater health insurance plans", icon: "users", image: "/images/2.png" },
+  { title: "Health insurance options for senior citizens", icon: "heart-pulse", image: "/images/3.png" },
   {
     title: "Plans with specified or enhanced coverage features, where available",
     icon: "shield-check",
+    image: "/images/4.png",
   },
-  { title: "Top-up or super top-up options, where available", icon: "arrow-up-circle" },
+  { title: "Top-up or super top-up options, where available", icon: "arrow-up-circle", image: "/images/5.png" },
   {
     title: "Other eligible health insurance products offered by Star Health or HDFC ERGO",
     icon: "file-check",
+    image: "/images/6.png",
   },
-  { title: "Travel Insurance", icon: "plane" },
-  { title: "Corporate & Group Health Insurance", icon: "building" },
+  { title: "Travel Insurance", icon: "plane", image: "/images/7.png" },
+  { title: "Corporate & Group Health Insurance", icon: "building", image: "/images/8.png" },
 ];
 
 const WHY_CHOOSE = [
@@ -173,7 +175,7 @@ export default function HomePage() {
           <div className="relative aspect-[584/400] w-full overflow-hidden rounded-2xl shadow-[0_16px_40px_rgba(15,31,69,0.15)]">
             {/* Save your image at /public/images/hero-family.jpg */}
             <Image
-              src="/images/hero-family.avif"
+              src="/images/Family.png"
               alt="Indian family relaxing together at home"
               fill
               priority
@@ -227,7 +229,7 @@ export default function HomePage() {
           <div className="relative aspect-[578/433] w-full overflow-hidden rounded-2xl shadow-[0_16px_40px_rgba(15,31,69,0.12)]">
             {/* /public/images/who-we-are.jpg */}
             <Image
-              src="/images/consultation.avif"
+              src="/images/Guidance.png"
               alt="Advisor discussing health insurance plans with customers"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
@@ -277,18 +279,24 @@ export default function HomePage() {
                 key={s.title}
                 className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-colors duration-200 hover:border-[#1456c1]/60 sm:p-7"
               >
-                <div className="flex items-center gap-2.5">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#d6e4f8] bg-[#eef4fd] text-[#1456c1]">
-                    <Icon name={s.icon} size={24} />
-                  </span>
-                  <span className="flex-1 rounded-full border border-slate-200 bg-[#f1f4f9] px-4 py-2 text-[12px] font-bold uppercase leading-snug tracking-[0.06em] text-slate-500">
-                    Star Health • HDFC ERGO
-                  </span>
-                </div>
+                <span className="self-start whitespace-nowrap rounded-full border border-slate-200 bg-[#f1f4f9] px-4 py-2 text-[12px] font-bold uppercase leading-snug tracking-[0.06em] text-slate-500">
+                  Star Health • HDFC ERGO
+                </span>
 
-                <h3 className="mt-6 flex-1 text-[19px] font-semibold leading-snug tracking-tight text-[#0f1f45]">
+                <h3 className="mt-5 text-[19px] font-semibold leading-snug tracking-tight text-[#0f1f45]">
                   {s.title}
                 </h3>
+
+                {/* Image grows to fill the leftover space, so no blank gap */}
+                <div className="relative mt-5 aspect-[4/3] w-full grow overflow-hidden rounded-xl border border-[#d6e4f8] bg-[#eef4fd]">
+                  <Image
+                    src={s.image}
+                    alt={s.title}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-contain object-center"
+                  />
+                </div>
 
                 <div className="mt-6 border-t border-slate-200 pt-5">
                   <a
@@ -368,7 +376,7 @@ export default function HomePage() {
       <section className="bg-[#f7f8fa]">
         <Container className="py-16 lg:py-20">
           <SectionHead
-            pill="Leadership — Sanju P B"
+            pill="Leadership — Sanju Palakkaparamban"
             title="Health Insurance Experience You Can Rely On"
             wide
           />
@@ -400,12 +408,12 @@ export default function HomePage() {
                 <h3
                   className={`${HEADING} mt-4 text-3xl font-extrabold`}
                 >
-                  Sanju P B
+                  Sanju Palakkaparamban
                 </h3>
 
                 <div className="mt-4 space-y-4 text-base leading-[1.55] text-slate-600">
                   <p>
-                    Sanju P B is an insurance professional with more than 15
+                    Sanju Palakkaparamban is an insurance professional with more than 15
                     years of experience across the healthcare and health
                     insurance sectors. His experience includes hospital
                     insurance operations, claims processes, insurance

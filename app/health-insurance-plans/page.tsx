@@ -27,21 +27,23 @@ const primaryBtn =
 
 /* ───────────────────────── Data ───────────────────────── */
 
-const OPTIONS: { title: string; icon: IconName }[] = [
-  { title: "Individual health insurance plans", icon: "user" },
-  { title: "Family floater health insurance plans", icon: "users" },
-  { title: "Health insurance options for senior citizens", icon: "heart-pulse" },
+const OPTIONS: { title: string; icon: IconName; image: string }[] = [
+  { title: "Individual health insurance plans", icon: "user", image: "/images/1.png" },
+  { title: "Family floater health insurance plans", icon: "users", image: "/images/2.png" },
+  { title: "Health insurance options for senior citizens", icon: "heart-pulse", image: "/images/3.png" },
   {
     title: "Plans with specified or enhanced coverage features, where available",
     icon: "shield-check",
+    image: "/images/4.png",
   },
-  { title: "Top-up or super top-up options, where available", icon: "arrow-up-circle" },
+  { title: "Top-up or super top-up options, where available", icon: "arrow-up-circle", image: "/images/5.png" },
   {
     title: "Other eligible health insurance products offered by Star Health or HDFC ERGO",
     icon: "file-check",
+    image: "/images/6.png",
   },
-  { title: "Travel Insurance", icon: "plane" },
-  { title: "Corporate & Group Health Insurance", icon: "building" },
+  { title: "Travel Insurance", icon: "plane", image: "/images/7.png" },
+  { title: "Corporate & Group Health Insurance", icon: "building", image: "/images/8.png" },
 ];
 
 const STEPS = [
@@ -229,7 +231,7 @@ export default function HealthInsurancePlansPage() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-200 shadow-[0_16px_40px_rgba(15,31,69,0.15)]">
             {/* Replace with your hero image for this page */}
             <Image
-              src="/images/consultation.avif"
+              src="/images/Guidance.png"
               alt="Advisor discussing health insurance plans with customers"
               fill
               priority
@@ -251,18 +253,24 @@ export default function HealthInsurancePlansPage() {
                 key={o.title}
                 className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_2px_10px_rgba(15,31,69,0.04)] sm:p-6"
               >
-                <div className="flex items-center gap-2">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#d6e4f8] bg-[#eef4fd] text-[#1456c1]">
-                    <Icon name={o.icon} size={24} />
-                  </span>
-                  <span className="flex-1 rounded-full border border-slate-200 bg-[#f1f4f9] px-4 py-2 text-[12px] font-bold uppercase leading-snug tracking-[0.06em] text-slate-500">
-                    Star Health • HDFC ERGO
-                  </span>
-                </div>
+                <span className="self-start whitespace-nowrap rounded-full border border-slate-200 bg-[#f1f4f9] px-4 py-2 text-[12px] font-bold uppercase leading-snug tracking-[0.06em] text-slate-500">
+                  Star Health • HDFC ERGO
+                </span>
 
-                <h3 className="mt-6 flex-1 text-[19px] font-semibold leading-snug tracking-tight text-[#0f1f45]">
+                <h3 className="mt-5 text-[19px] font-semibold leading-snug tracking-tight text-[#0f1f45]">
                   {o.title}
                 </h3>
+
+                {/* Image grows to fill the leftover space, so no blank gap */}
+                <div className="relative mt-5 aspect-[4/3] w-full grow overflow-hidden rounded-xl border border-[#d6e4f8] bg-[#eef4fd]">
+                  <Image
+                    src={o.image}
+                    alt={o.title}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-contain object-center"
+                  />
+                </div>
 
                 <div className="mt-6 border-t border-slate-200 pt-5">
                   <a
